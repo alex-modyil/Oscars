@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- Basic Page Needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>Oscars</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Modernizr
+   =================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Favicons
+   =================================================== -->
+    <link rel="shortcut icon" href="favicon.png">
+</head>
+
+<body>
+
+    <!--[if lt IE 9]>
+   	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. 
+   	Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+   <![endif]-->
+
+    <!-- content-wrap -->
+    <div id="content-wrap">
+        <!-- main  -->
+        <main class="row">
+            <header class="site-header">
+                <div class="logo">
+                    <a href="index.html">Oscars.</a>
+                </div>
+            </header>
+
+            <div id="main-content" class="twelve columns">
+
+                <h1>89th Academy Awards</h1>
+                <p>February 26, 2017, 4:00 PM PST</p>
+                <hr>
+                <div id="counter" class="group">
+                    <span class="time days flip">134 <em>days</em></span>
+                    <span class="time hours flip">12 <em>hours</em></span>
+                    <span class="time minutes flip">50 <em>minutes</em></span>
+                    <span class="time seconds flip">33 <em>seconds</em></span>
+                </div>
+
+                <!-- MailChimp Signup Form -->
+                <div id="mc-signup">
+                    <form id="mc-form" class="group">
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                        <input type="submit" value="Get Notified" name="subscribe" class="button">
+                        <label for="mce-EMAIL" class="subscribe-message"></label>
+                    </form>
+                </div>
+				
+				<div class="modal-results" id="ocarsresults">
+					<ul>
+						<li id="bpic"></li>
+						<li id="bdic"></li>
+						<li id="bffic"></li>					
+					</ul>
+				</div>		
+            </div>
+            <div class="modal-toggles" id="votelink">
+                <ul>
+                    <li class="about-us"><a href="#mod-about">Vote</a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+    </div>
+    <!-- /content-wrap -->
+
+    <!-- modals
+   =================================================== -->
+
+    <section id="mod-about">
+        <!-- Modal toggle -->
+        <div class="modal-toggle">
+            <a href="#" title="close" id="modal-close">close</a>
+        </div>
+
+        <div class="row about-content">
+            <div id="adventure-project-container" class="">
+                            <style>
+                               @media only screen {															
+									figure {
+										margin: 0
+									}
+									img {
+										height: auto;
+										max-width: 100%;
+										-ms-interpolation-mode: bicubic
+									}
+									.lt-ie10 img {
+										width: auto
+									}
+									.image>img {
+										display: block
+									}
+									a img {
+										border: none
+									}
+                                    .axm155231-ballot-category-title {
+                                        padding: 15px 0
+                                    }
+                                    .axm155231-ballot-category-title h5 {
+                                        font-size: 21px;
+                                        line-height: 1.25em;
+                                        font-weight: 300;
+                                        font-family: nyt-franklin, arial, helvetica, sans-serif;
+                                        margin: 0;
+                                        padding: 0;
+                                        color: #bda043
+                                    }
+                                    .axm155231-ballot-category-pics {
+                                        display: block;
+                                        float: left;
+                                        margin: 0;
+                                        padding: 0
+                                    }
+                                    .axm155231-ballot-category-pics-frame {
+                                        margin: 0;
+                                        padding: 0;
+                                        position: relative;
+                                    }
+                                    .axm155231-ballot-category-pics.unfocused figure {
+                                        -webkit-transition: opacity 1s ease-in-out;
+                                        transition: opacity 1s ease-in-out
+                                    }
+                                    .axm155231-ballot-category-pics figure {
+                                        display: block;
+                                        margin: 0;
+                                        padding: 0;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        opacity: 0
+                                    }
+                                    .axm155231-ballot-category-pics figure.active {
+                                        opacity: 1
+                                    }
+                                    .axm155231-ballot-category-pics figure img {
+                                        display: block
+                                    }
+                                    .axm155231-ballot-nominee:first-child {
+                                        border-top: none
+                                    }
+                                    .axm155231-can-vote .axm155231-ballot-nominee {
+                                        cursor: pointer
+                                    }
+                                    .axm155231-ballot-nominee-inner {
+                                        font-size: 12px;
+                                        overflow: hidden;
+                                        padding: 6px 6px 9px 31px;
+                                        position: relative;
+                                        margin: 0;
+                                        border-radius: 2px;
+                                        -webkit-transition: background .1s ease-in-out;
+                                        transition: background .1s ease-in-out
+                                    }
+                                    .axm155231-vote-target {
+                                        background: url("images/vote-target-sprite.png") no-repeat;
+                                        background-position: 0 0;
+                                        position: absolute;
+                                        top: 7px;
+                                        left: 7px;
+                                        width: 19px;
+                                        height: 19px
+                                    }
+                                    .axm155231-cols-full .axm155231-vote-target {
+                                        top: 9px
+                                    }
+                                    .axm155231-ballot-nominee-title {
+                                        display: block;
+                                        font-size: 15px;
+                                        font-weight: 100;
+                                        line-height: 18px
+                                    }
+                                    .axm155231-cols-full .axm155231-ballot-nominee-title {
+                                        float: left
+                                    }
+                                    .axm155231-ballot-nominee-subtitle {
+                                        display: block;
+                                        font-size: 10px;
+                                        font-weight: 100;
+                                        line-height: 18px
+                                    }
+                                    .axm155231-cols-full .axm155231-ballot-nominee-subtitle {
+                                        float: left
+                                    }									
+                                    a.axm155231-to-top {
+                                        border-top: 1px solid #ddd;
+                                        padding: 8px 0;
+                                        font-size: 12px;
+                                        text-transform: uppercase
+                                    }
+                                    #axm155231-ballot-rows.axm155231-ballot-loading {
+                                        opacity: 0
+                                    }
+                                    .axm155231-ballot-row {
+                                        border-top: 1px solid #ccc;
+                                        padding-top: 3px;
+                                        zoom: 1;
+                                        margin: 0;
+                                        overflow: hidden;
+                                        position: relative
+                                    }
+                                    .axm155231-ballot-row.axm155231-1col {
+                                        border-top: 0;
+                                        padding-top: 0
+                                    }
+                                    .axm155231-cols-half {
+                                        width: 100%;
+                                        padding-bottom: 0px
+                                    }
+                                    .axm155231-ballot-row.axm155231-2col>div,
+                                    .axm155231-ballot-row.axm155231-3col>div {
+                                        display: inline-block;
+                                        width: 50%;
+                                        float: left
+                                    }
+                                    .axm155231-ballot-row.axm155231-3col>div {
+                                        width: 30%
+                                    }
+                                    .axm155231-ballot-row.axm155231-2col>div:last-child .axm155231-cols-half {
+                                        float: right;
+                                        display: inline-block
+                                    }
+                                    .axm155231-cols-half .axm155231-ballot-category-pics {
+                                        margin-bottom: 1em
+                                    }
+                                    .axm155231-ballot-row {
+                                        padding-left: 20px;
+                                        padding-right: 20px
+                                    }
+                                    .axm155231-cols-half .axm155231-ballot-nominees,
+                                    .axm155231-cols-half p.axm155231-ballot-nominee-result {
+                                        margin-left: 100px
+                                    }
+                                    .axm155231-cols-full .axm155231-ballot-category-share,
+                                    .axm155231-cols-full .axm155231-ballot-nominees,
+                                    .axm155231-cols-full p.axm155231-ballot-nominee-result {
+                                        margin-left: 470px
+                                    }
+                                    .axm155231-cols-half .axm155231-ballot-category-pics {
+                                        width: 200px;
+                                        min-height: 300px
+                                    }
+                                    .axm155231-cols-half .axm155231-ballot-category-pics-frame,
+                                    .axm155231-cols-half .img {
+                                        width: 150x;
+                                        height: 250
+                                    }
+                                    .axm155231-cols-full .axm155231-ballot-category-pics img {
+                                        width: 450px
+                                    }
+									
+									#left-panel-picture{
+										float:left;
+									}
+									#left-panel-picture ul li{
+										list-style-type:none;
+									}	
+									#right-panel-picture{
+										float:left;
+									}
+									#right-panel-picture ul li{
+										list-style-type:none;
+                                        cursor: pointer										
+									}
+
+									#left-panel-director{
+										width:55%;
+										float:left;
+									}
+									#left-panel-director ul li{
+										list-style-type:none;
+									}	
+									#right-panel-director{
+										width:45%;
+										float:left;
+									}
+									#right-panel-director ul li{
+										list-style-type:none;
+									    cursor: pointer
+									}
+									
+									#left-panel-ffilm{
+										width:55%;
+										float:left;
+									}
+									#left-panel-ffilm ul li{
+										list-style-type:none;
+									}	
+									#right-panel-ffilm{
+										width:45%;
+										float:left;
+									}
+									#right-panel-ffilm ul li{
+										list-style-type:none;
+										cursor: pointer
+									}								
+																	
+                                    .axm155231-vote-target-selected {
+                                        background-position: 0 -19px;
+                                    }
+
+									.submitbutton
+									{
+										display:block;
+										margin:0 auto;
+										color: black;
+									}									
+                                }
+								
+							@media only screen and (max-width:500px) {
+							
+								.axm155231-ballot-row.axm155231-2col>div,
+									.axm155231-ballot-row.axm155231-2col>div:last-child .axm155231-cols-half {
+										clear: both;
+									}
+									
+									#right-panel-ffilm, #right-panel-director{
+										width:100%;
+										clear: both;
+									}
+
+									#left-panel-director, #left-panel-ffilm{
+										width:90%;
+										float:left;
+									}									
+								}								
+                            </style>			
+                <div id="adventure-target">
+                    <div class="axm155231-oscar-ballot" id="axm155231-ballot">
+                        <div class="ballot axm155231-can-vote">
+                            <div class="axm155231-ballot-row axm155231-1col clearfix">
+                                <div class="multiple-choice-question  unanswered has-selected">
+                                    <div class="axm155231-ballot-category axm155231-cols-full" id="child-auto-id-1">
+                                        <div class="axm155231-ballot-category-title">
+                                            <h5>Best Picture</h5>
+                                        </div>
+										<div id="left-panel-picture">
+											<ul>
+											<li class="first-left"><img src="images/11ARRIVAL-master495.jpg"></li>
+											<li class="second-left"><img src="images/16FENCES-master495.jpg"></li>
+											<li class="third-left"><img src="images/02HACKSAW1-master495.jpg"></li>
+											<li class="fourth-left"><img src="images/12HELLHIGH2-master495.jpg"></li>
+											<li class="fifth-left"><img src="images/23COVERMOVIES1-master495.jpg"></li>
+											<li class="sixth-left"><img src="images/27COVER1-master495-v2.jpg"></li>
+											<li class="seventh-left"><img src="images/25LION2-master495.jpg"></li>	
+											<li class="eighth-left"><img src="images/18MANCHESTER1-master495-v2.jpg"></li>	
+											<li class="ninth-left"><img src="images/21MOONLIGHT-master495-v4.jpg"></li>												
+											</ul>
+										</div>										
+										<div id="right-panel-picture">
+										   <ul id="picturelist">
+										   <input type="hidden" name="selectedpic" value="" id="selectedpic" />
+												<li class="first-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Arrival</span>
+													</div>
+												</li>
+												<li class="second-right" id="Fences-Pic">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Fences</span>
+													</div>																						
+												</li>
+												<li class="third-right" id="Hacksaw Ridge-Pic">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Hacksaw Ridge</span>
+													</div>												
+												</li>
+												<li class="fourth-right">											
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Hell or High Water</span>
+													</div>	
+												</li>
+												<li class="fifth-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Hidden Figures</span>
+													</div>												
+												</li>
+												<li class="sixth-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">La La Land</span>
+													</div>												
+												</li>
+												<li class="seventh-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Lion</span>
+													</div>													
+												</li>		
+												<li class="eighth-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Manchester by the Sea</span>
+													</div>												
+												</li>		
+												<li class="ninth-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Moonlight</span>
+													</div>												
+												</li>													
+										   </ul>
+										</div>																	
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="axm155231-ballot-row axm155231-2col clearfix">
+                                <div class="multiple-choice-question  unanswered">
+                                    <div class="axm155231-ballot-category axm155231-cols-half" id="child-auto-id-2">
+                                        <div class="axm155231-ballot-category-title">
+                                            <h5>Director</h5>
+                                        </div>
+										<div id="left-panel-director">
+											<ul>
+											<li class="first-left"><img src="images/27COVERJP2-verticalTwoByThree735.jpg"></li>
+											<li class="second-left"><img src="images/gibson-hacksaw-verticalTwoByThree735.jpg"></li>
+											<li class="third-left"><img src="images/08JENKINS-MCCRANEY-web1-verticalTwoByThree735-v3.jpg"></li>	
+											<li class="fourth-left"><img src="images/18MANCHESTER2-verticalTwoByThree735-v2.jpg"></li>	
+											<li class="fifth-left"><img src="images/13DENIS-VILLENEUVE1-verticalTwoByThree735-v3.jpg"></li>												
+											</ul>
+										</div>										
+										<div id="right-panel-director">
+										   <ul id="directorlist">
+										   <input type="hidden" name="selecteddir" value="" id="selecteddir" />										   
+												<li class="first-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Damien Chazelle</span>
+														<span class="axm155231-ballot-nominee-subtitle">La La Land</span>
+													</div>												
+												</li>
+												<li class="second-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Mel Gibson</span>
+														<span class="axm155231-ballot-nominee-subtitle">Hacksaw Ridge</span>
+													</div>												
+												</li>
+												<li class="third-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+													    <span class="axm155231-ballot-nominee-title">Barry Jenkins</span>
+														<span class="axm155231-ballot-nominee-subtitle">Moonlight</span>
+													</div>													
+												</li>		
+												<li class="fourth-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Kenneth Lonergan</span>
+														<span class="axm155231-ballot-nominee-subtitle">Manchester by the Sea</span>
+													</div>												
+												</li>		
+												<li class="fifth-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Denis Villeneuve</span>
+														<span class="axm155231-ballot-nominee-subtitle">Arrival</span>
+													</div>												
+												</li>													
+										   </ul>
+										</div>											
+                                    </div>
+                                </div>
+                                <div class="multiple-choice-question  unanswered">
+                                    <div class="axm155231-ballot-category axm155231-cols-half" id="child-auto-id-3">
+                                        <div class="axm155231-ballot-category-title">
+                                            <h5>Foreign Film</h5>
+                                        </div>
+										<div id="left-panel-ffilm">
+											<ul>
+											<li class="first-left"><img src="images/AManCalledOve-verticalTwoByThree735.jpg"></li>
+											<li class="second-left"><img src="images/LandofMine-verticalTwoByThree735.jpg"></li>
+											<li class="third-left"><img src="images/Salesman-verticalTwoByThree735.jpg"></li>	
+											<li class="fourth-left"><img src="images/Tanna-verticalTwoByThree735.jpg"></li>	
+											<li class="fifth-left"><img src="images/ToniErdman-verticalTwoByThree735.jpg"></li>												
+											</ul>
+										</div>										
+										<div id="right-panel-ffilm">
+										   <ul id="ffilmlist">
+										   <input type="hidden" name="selectedffilm" value="" id="selectedffilm" />										   
+												<li class="first-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">A Man Called Ove</span>
+														<span class="axm155231-ballot-nominee-subtitle">Sweden</span>
+													</div>												
+												</li>
+												<li class="second-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Land of Mine</span>
+														<span class="axm155231-ballot-nominee-subtitle">Denmark</span>
+													</div>												
+												</li>
+												<li class="third-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+													    <span class="axm155231-ballot-nominee-title">The Salesman</span>
+														<span class="axm155231-ballot-nominee-subtitle">Iran</span>
+													</div>													
+												</li>		
+												<li class="fourth-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Tanna</span>
+														<span class="axm155231-ballot-nominee-subtitle">Australia</span>
+													</div>												
+												</li>		
+												<li class="fifth-right">
+													<div class="axm155231-ballot-nominee-inner">
+														<span class="axm155231-vote-target">&nbsp;</span>
+														<span class="axm155231-ballot-nominee-title">Toni Erdmann</span>
+														<span class="axm155231-ballot-nominee-subtitle">Germany</span>
+													</div>												
+												</li>													
+										   </ul>
+										</div>											
+                                    </div>
+                                </div>
+                            </div>
+							
+							<button type="button" class="submitbutton" id="submitoscars">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /about-content -->
+    </section>
+    <!-- /mod-about -->
+
+    <section id="mod-map">
+
+        <!-- Modal toggle -->
+        <div class="modal-toggle">
+            <a href="#" title="close" id="modal-close"><span>Close</span></a>
+        </div>
+
+        <div id="map-container"></div>
+
+        <div id="map-zoom-in"></div>
+        <div id="map-zoom-out"></div>
+
+    </section>
+    <!-- /mod-about -->
+
+
+    <!-- footer
+   =================================================== -->
+    <footer class="group">
+        <ul class="footer-copyright">
+            <li>&copy; Copyright 2015 Advent</li>
+            <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a>
+            </li>
+        </ul>
+    </footer>
+
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+    <!-- Script
+=================================================== -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?v=3.13&amp;sensor=false"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/main.js"></script>
+	<script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+	<script type="text/javascript" src="lib/url-template/url-template.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+	<script type="text/javascript" src="apigClient.js"></script>
+</body>
+
+</html>
